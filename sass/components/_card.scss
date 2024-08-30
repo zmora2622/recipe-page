@@ -1,0 +1,26 @@
+@use "../base/colors" as colors;
+.card {
+ display: flex;
+ flex-direction: column;
+ padding: 40px;
+ background-color: map-get(colors.$palette, white);
+ border-radius: 24px;
+ max-width: 736px;
+ width: 100%;
+ row-gap: 41px;
+
+ &__img {
+  border-radius: 12px;
+  object-fit: cover;
+ }
+
+ &__article {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+
+  & > :nth-child(4) {
+   margin: 32px 0;
+  }
+ }
+}
