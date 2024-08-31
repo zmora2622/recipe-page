@@ -1,19 +1,22 @@
 @use "../base/colors" as colors;
-@use "../base/typografy" as typography;
+@use "../base/typography" as typography;
 .recipe {
  &__header {
   display: flex;
   flex-direction: column;
-  row-gap: 24px;
+  row-gap: 23px;
  }
 
  &__preparation {
   display: flex;
   flex-direction: column;
   background-color: map-get(colors.$palette, rose-50);
-  padding: 25px 28px;
+  padding: 24.5px 24px 16px 28px;
+  margin-top: 35px;
+  //   margin-top: 0.5px;
+  //   margin-left: 4px;
   border-radius: 12px;
-  row-gap: 12px;
+  row-gap: 16px;
 
   h2 {
    color: map-get($map: colors.$palette, $key: rose-800);
@@ -21,27 +24,108 @@
    font-weight: typography.$font-semibold;
    font-family: typography.$font-outfit;
   }
+ }
 
-  &-list {
-   display: flex;
-   flex-direction: column;
-   row-gap: 8px;
-   list-style-type: none;
+ &__list {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
 
-   &-item {
-       position: relative;
-       padding-left: 50px;
+  &-item {
+   position: relative;
+   padding-left: 40px;
+   margin-bottom: 8px;
+
+   &::before {
+    content: "";
+    position: absolute;
+    // line-height: 1.5;
+    left: 8px;
+    top: 11.5px;
+    transform: translateY(-50%);
+    width: 4px;
+    height: 4px;
+    border-radius: 100%;
+    background-color: map-get(colors.$palette, rose-800);
+   }
+
+   &--no-marker {
+    padding: 0;
+    margin-left: 24px;
+    padding-left: 16px;
+    text-align: left;
+
+    &::marker {
+     color: map-get($map: colors.$palette, $key: brown-800);
+     font: typography.$font-bold 1.6rem typography.$font-outfit;
+     font-weight: typography.$font-bold;
+    }
 
     &::before {
-     content: "";
-     position: absolute;
-     left: 7.65px;
-     top: 13.75px;
-     transform: translateY(-50%);
-     width: 4px;
-     height: 4px;
-     border-radius: 100%;
-     background-color: map-get(colors.$palette, rose-800);
+     content: none;
+    }
+   }
+  }
+
+  &--line {
+   border-bottom: 1px solid map-get(colors.$palette, stone-150);
+   padding-bottom: 23px;
+  }
+  &--numeric {
+   list-style: decimal;
+  }
+ }
+
+ &__ingredients {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+  h2 {
+   line-height: 1.5;
+   margin-bottom: 16.5px;
+  }
+ }
+
+ &__instructions {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: 32px;
+ }
+ &__nutrition {
+  display: flex;
+  flex-direction: column;
+  margin-top: 32px;
+  p {
+   margin-top: 24px;
+   margin-bottom: 12px;
+  }
+
+  &-table {
+   table-layout: fixed;
+   border-collapse: separate;
+   border-spacing: 0;
+
+   &-row {
+    border-bottom: 1px solid red;
+   }
+
+   &-cell {
+    height: 48px;
+    padding-left: 32px;
+    border-bottom: 1px solid map-get(colors.$palette, stone-150);
+
+    &:nth-child(1) {
+     font-weight: typography.$font-regular;
+     width: 304px;
+    }
+    &--no-border {
+     border: none;
+    }
+    &:nth-child(2) {
+     font-weight: typography.$font-bold;
+     line-height: 1.5;
+     color: map-get(colors.$palette, brown-800);
     }
    }
   }

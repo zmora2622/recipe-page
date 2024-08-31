@@ -1,5 +1,5 @@
 @use "colors" as colors;
-@use "typografy" as typografy;
+@use "typography" as typografy;
 
 body {
  background-color: map-get(colors.$palette, stone-100);
@@ -24,6 +24,7 @@ h1 {
 h2 {
  color: map-get(colors.$palette, brown-800);
  font-size: 2.8rem;
+ line-height: 1;
 }
 
 p,

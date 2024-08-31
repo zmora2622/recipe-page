@@ -2,7 +2,7 @@
 .card {
  display: flex;
  flex-direction: column;
- padding: 40px;
+ padding: 40px 40px 28px;
  background-color: map-get(colors.$palette, white);
  border-radius: 24px;
  max-width: 736px;
@@ -17,10 +17,5 @@
  &__article {
   display: flex;
   flex-direction: column;
-  gap: 32px;
-
-  & > :nth-child(4) {
-   margin: 32px 0;
-  }
  }
 }
