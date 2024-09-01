@@ -110,7 +110,7 @@ td {
   justify-content: center;
   max-width: 1440px;
   width: 100%;
-  margin: 122px 48px;
+  margin: 123px 48px;
 }
 @media (max-width: 375px) {
   .grid {
