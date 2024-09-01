@@ -9,9 +9,23 @@
  width: 100%;
  row-gap: 41px;
 
+ @media (max-width: 375px) {
+  border-radius: 0;
+ }
  &__img {
   border-radius: 12px;
   object-fit: cover;
+
+  @media (max-width: 375px) {
+   border-radius: 0;
+   height: 171px;
+  }
+ }
+
+ &:first-child {
+  @media (max-width: 375px) {
+   padding: 0;
+  }
  }
 
  &__article {
