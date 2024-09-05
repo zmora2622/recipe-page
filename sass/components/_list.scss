@@ -22,7 +22,7 @@
   letter-spacing: normal;
 
   &::marker {
-   color: map-get($map: variable.$article-palette, $key: rose-800);
+   color: map-get($map: variable.$article-palette, $key: brown-800);
    font: variable.$font-bold variable.$font-size-sm variable.$font-secondary;
   }
  }
