@@ -109,7 +109,6 @@ td {
 }
 .container {
   max-width: 90rem;
-  margin: 128px 48px;
 }
 
 @media (max-width: 38rem) {
