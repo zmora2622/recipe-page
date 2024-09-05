@@ -2,7 +2,7 @@ body {
   background-color: hsl(30, 54%, 90%);
   display: flex;
   justify-content: center;
-  padding: 128px 48px;
+  margin: 128px 48px;
 }
 
 .sr-only {
