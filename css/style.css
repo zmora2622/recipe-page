@@ -1,258 +1,249 @@
+body {
+  background-color: hsl(30, 54%, 90%);
+  display: flex;
+  justify-content: center;
+  padding: 128px 48px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+@media (max-width: 38rem) {
+  body {
+    padding: 0;
+  }
+}
+/* Box sizing rules */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
 }
 
-html {
-  font-size: 62.5%;
-  scroll-behavior: smooth;
-}
-
-body {
-  font-size: 1.6rem;
-  width: 100%;
-  min-height: 100dvh;
-}
-
-img {
-  height: auto;
-}
-
-a {
-  text-decoration: none;
-}
-
+/* Remove default margin */
+body,
 h1,
 h2,
 h3,
 h4,
 h5,
 h6,
-p {
-  font-size: 100%;
-}
-
-body {
-  background-color: hsl(30, 54%, 90%);
-  display: flex;
-  justify-content: center;
-  font-size: 1.6rem;
-}
-
-h1,
-h2 {
-  font-family: "Young Serif", serif;
-  font-weight: 400;
-}
-
-h1 {
-  color: hsl(24, 5%, 18%);
-  font-size: 4rem;
-  line-height: 1;
-}
-
-h2 {
-  color: hsl(14, 45%, 36%);
-  font-size: 2.8rem;
-  line-height: 1;
-}
-
 p,
-ul,
-li,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+hr {
+  border: 0;
+  margin: 0;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100svh;
+  text-rendering: optimizeSpeed;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+th,
 td {
-  color: hsl(30, 10%, 34%);
-  font-family: "Outfit", sans-serif;
-  font-weight: 400;
-  line-height: 1.5;
+  padding: 0;
 }
 
-.card {
-  display: flex;
-  flex-direction: column;
-  padding: 40px 40px 28px;
-  background-color: hsl(0, 0%, 100%);
-  border-radius: 24px;
-  max-width: 736px;
-  width: 100%;
-  row-gap: 41px;
-}
-@media (max-width: 375px) {
-  .card {
-    border-radius: 0;
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }
-.card__img {
-  border-radius: 12px;
-  object-fit: cover;
-}
-@media (max-width: 375px) {
-  .card__img {
-    border-radius: 0;
-    height: 171px;
-  }
-}
-@media (max-width: 375px) {
-  .card:first-child {
-    padding: 0;
-  }
-}
-.card__article {
-  display: flex;
-  flex-direction: column;
+.container {
+  max-width: 90rem;
+  margin: 128px 48px;
 }
 
-.grid {
-  display: flex;
-  justify-content: center;
-  max-width: 1440px;
-  width: 100%;
-  margin: 123px 48px;
-}
-@media (max-width: 375px) {
-  .grid {
+@media (max-width: 38rem) {
+  .container {
     margin: 0;
   }
 }
+.article {
+  max-width: 46rem;
+  padding: 2.5rem;
+  padding-bottom: 29px;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 1.5rem;
+}
+.article__image {
+  object-fit: cover;
+  border-radius: 0.75rem;
+}
+.article__section-divider {
+  border-top: 1px solid hsl(30, 18%, 87%);
+}
 
-@media (max-width: 375px) {
-  .recipe__container {
-    padding: 0 24px;
+@media (max-width: 38rem) {
+  .article {
+    padding: 0;
+  }
+  .article__image {
+    border-radius: 0;
+  }
+  .article__section-divider {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
   }
 }
-.recipe__header {
-  display: flex;
-  flex-direction: column;
-  row-gap: 23px;
+.section {
+  margin: 2rem 0 1.9375rem;
 }
-@media (max-width: 375px) {
-  .recipe__header {
-    row-gap: 24px;
-  }
-  .recipe__header h1 {
-    font-size: 3.6rem;
-  }
-  .recipe__header p {
-    font-size: 1.59rem;
-    line-height: 1.5;
-  }
-}
-.recipe__preparation {
-  display: flex;
-  flex-direction: column;
+.section--highlighted {
+  padding: 28px 28px 20px;
+  border-radius: 0.75rem;
   background-color: hsl(330, 100%, 98%);
-  padding: 24.5px 24px 16px 28px;
-  margin-top: 35px;
-  border-radius: 12px;
-  row-gap: 16px;
+  color: hsl(30, 10%, 34%);
 }
-@media (max-width: 375px) {
-  .recipe__preparation {
-    padding: 22px 24px 16px 24px;
-  }
+.section--large-margin-top {
+  margin-top: 2.5rem;
 }
-.recipe__preparation h2 {
-  color: hsl(332, 51%, 32%);
-  font-size: 2rem;
-  font-weight: 600;
-  font-family: "Outfit", sans-serif;
+.section--remove-margin-bottom {
+  margin-bottom: 0;
 }
-.recipe__list {
-  display: flex;
-  flex-direction: column;
-  list-style-type: none;
-}
-.recipe__list-item {
-  position: relative;
-  padding-left: 40px;
-  margin-bottom: 8px;
-}
-.recipe__list-item::before {
-  content: "";
-  position: absolute;
-  left: 8px;
-  top: 11.5px;
-  transform: translateY(-50%);
-  width: 4px;
-  height: 4px;
-  border-radius: 100%;
-  background-color: hsl(332, 51%, 32%);
-}
-.recipe__list-item--no-marker {
-  padding: 0;
-  margin-left: 24px;
-  padding-left: 16px;
-  text-align: left;
-}
-.recipe__list-item--no-marker::marker {
+.section__header {
+  margin-bottom: 1.5rem;
+  font-family: "Young Serif", serif;
+  font-weight: 400;
+  font-size: 1.75rem;
+  line-height: 1;
   color: hsl(14, 45%, 36%);
-  font: 700 1.6rem "Outfit", sans-serif;
-  font-weight: 700;
 }
-.recipe__list-item--no-marker::before {
-  content: none;
+.section__header--font-color-lg {
+  font-size: 2.5rem;
+  color: hsl(24, 5%, 18%);
 }
-.recipe__list--line {
-  border-bottom: 1px solid hsl(30, 18%, 87%);
-  padding-bottom: 23px;
+.section__header--font-family-weight-color-md {
+  font-family: "Outfit", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: hsl(332, 51%, 32%);
 }
-.recipe__list--numeric {
-  list-style: decimal;
+.section__header--margin-sm {
+  margin-bottom: 1rem;
 }
-.recipe__ingredients {
-  display: flex;
-  flex-direction: column;
-  margin-top: 30px;
-}
-.recipe__ingredients h2 {
+.section__text {
+  margin: 1.5rem 0;
+  font-family: "Outfit", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
   line-height: 1.5;
-  margin-bottom: 16.5px;
 }
-@media (max-width: 375px) {
-  .recipe__ingredients {
-    margin-top: 26px;
-  }
-}
-.recipe__instructions {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-  margin-top: 32px;
-}
-.recipe__nutrition {
-  display: flex;
-  flex-direction: column;
-  margin-top: 32px;
-}
-.recipe__nutrition p {
-  margin-top: 24px;
+.section__text--change-margin-bottom {
   margin-bottom: 12px;
 }
-.recipe__nutrition-table {
+
+@media (max-width: 38rem) {
+  .section {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+  }
+}
+.list[role=list] {
+  list-style-type: disc;
+  margin-left: 25px;
+  color: hsl(30, 10%, 34%);
+}
+.list--decimal[role=list] {
+  list-style-type: decimal;
+}
+.list__item {
+  margin-bottom: 8px;
+  padding-left: 15px;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 400;
+  font-family: "Outfit", sans-serif;
+  text-wrap: pretty;
+  letter-spacing: normal;
+}
+.list__item::marker {
+  color: hsl(332, 51%, 32%);
+  font: 700 16px "Outfit", sans-serif;
+}
+
+.table {
+  border-collapse: collapse;
   table-layout: fixed;
-  border-collapse: separate;
-  border-spacing: 0;
+  width: 100%;
 }
-.recipe__nutrition-table-row {
-  border-bottom: 1px solid red;
-}
-.recipe__nutrition-table-cell {
-  height: 48px;
-  padding-left: 32px;
+.table__row {
   border-bottom: 1px solid hsl(30, 18%, 87%);
 }
-.recipe__nutrition-table-cell:nth-child(1) {
-  font-weight: 400;
-  width: 304px;
-}
-.recipe__nutrition-table-cell--no-border {
-  border: none;
-}
-.recipe__nutrition-table-cell:nth-child(2) {
-  font-weight: 700;
+.table__cell {
+  font-family: "Outfit", sans-serif;
   line-height: 1.5;
+  font-weight: 400;
+  font-size: 16px;
+  text-align: start;
+  padding: 0.71875rem 0;
+}
+.table__cell--header {
+  width: 50%;
+  padding-left: 32px;
+  color: hsl(30, 10%, 34%);
+}
+.table__cell--normal {
+  width: 50%;
+  padding-left: 8px;
   color: hsl(14, 45%, 36%);
+  font-weight: 700;
 }

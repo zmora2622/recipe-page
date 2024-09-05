@@ -1,0 +1,29 @@
+@use "../base/variables" as variable;
+.list {
+ &[role="list"] {
+  list-style-type: disc;
+  margin-left: 25px;
+  color: map-get($map: variable.$article-palette, $key: stone-600);
+ }
+
+ &--decimal {
+  &[role="list"] {
+   list-style-type: decimal;
+  }
+ }
+ &__item {
+  margin-bottom: 8px;
+  padding-left: 15px;
+  font-size: variable.$font-size-sm;
+  line-height: variable.$line-height-150;
+  font-weight: variable.$font-regular;
+  font-family: variable.$font-secondary;
+  text-wrap: pretty;
+  letter-spacing: normal;
+
+  &::marker {
+   color: map-get($map: variable.$article-palette, $key: rose-800);
+   font: variable.$font-bold variable.$font-size-sm variable.$font-secondary;
+  }
+ }
+}

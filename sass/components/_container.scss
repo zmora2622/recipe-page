@@ -1,0 +1,12 @@
+@use "../utils/functions" as function;
+
+.container {
+ max-width: function.pixel_to_rem(1440px);
+ margin: 128px 48px;
+}
+
+@media (max-width: function.pixel_to_rem(608px)) {
+ .container {
+  margin: 0;
+ }
+}
