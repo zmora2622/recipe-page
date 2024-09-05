@@ -47,8 +47,9 @@
   font-size: variable.$font-size-sm;
   font-weight: variable.$font-regular;
   line-height: variable.$line-height-150;
-  color: map-get($map: variable.$article-palette, $key: stone-600)
-   &--change-margin-bottom {
+  color: map-get($map: variable.$article-palette, $key: stone-600);
+
+  &--change-margin-bottom {
    margin-bottom: 12px;
   }
  }
