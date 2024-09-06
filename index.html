@@ -10,10 +10,8 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Young+Serif&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Outfit&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Young+Serif&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 
   <title>Frontend Mentor | Recipe page</title>
@@ -21,29 +19,30 @@
 </head>
 
 <body>
-  <h1 class="sr-only">Omlet recipe article</h1>
+
   <main class="container">
     <article class="article">
-      <img class="article__image" src="./assets/images/image-omelette.jpeg" alt="">
+      <img class="article__image" src="./assets/images/image-omelette.jpeg"
+        alt="Photo from the kitchen, showing a plate standing on the counter. In the centre of the plate is a half-folded omelette inside which vegetables, cheese and herbs are wrapped. Next to the omelette on the plate is toast slightly covered by the omelette.">
 
       <header class="section section--large-margin-top">
-        <h2 class="section__header section__header--font-color-lg"> Simple Omelette Recipe
-        </h2>
+        <h1 class="section__header section__header--font-color-lg"> Simple Omelette Recipe
+        </h1>
         <p class="section__text"> An easy and quick dish, perfect for any meal. This classic omelette combines beaten
           eggs cooked to perfection, optionally filled with your choice of cheese, vegetables, or meats. </p>
       </header>
       <section class="section section--highlighted">
-        <h3 class="section__header section__header--font-family-weight-color-md section__header--margin-sm">
-          Preparation time </h3>
-        <ul role="list" class="list">
+        <h2 class="section__header section__header--font-family-weight-color-md section__header--margin-sm">
+          Preparation time </h2>
+        <ul class="list">
           <li class="list__item"> <strong>Total</strong>: Approximately 10 minutes </li>
           <li class="list__item"> <strong>Preparation</strong>: 5 minutes </li>
           <li class="list__item"> <strong>Cooking:</strong> 5 minutes. </li>
         </ul>
       </section>
       <section class="section">
-        <h3 class="section__header"> Ingredients </h3>
-        <ul role="list" class="list">
+        <h2 class="section__header"> Ingredients </h2>
+        <ul class="list">
           <li class="list__item"> 2-3 large eggs </li>
           <li class="list__item"> Salt, to taste </li>
           <li class="list__item"> Pepper, to taste </li>
@@ -53,8 +52,8 @@
       </section>
       <hr class="article__section-divider">
       <section class="section ">
-        <h3 class="section__header"> Instructions </h3>
-        <ol role="list" class="list list--decimal">
+        <h2 class="section__header"> Instructions </h2>
+        <ol class="list list--decimal">
           <li class="list__item "> <strong>Beat the eggs:</strong> In a bowl, beat the eggs with a pinch of salt and
             pepper until they are well mixed. You can add a tablespoon of water or milk for a fluffier texture. </li>
           <li class="list__item"> <strong> Heat the pan:</strong> Place a non-stick frying pan over medium heat and add
@@ -76,7 +75,7 @@
       </section>
       <hr class="article__section-divider">
       <section class="section section--remove-margin-bottom">
-        <h3 class="section__header"> Nutrition </h3>
+        <h2 class="section__header"> Nutrition </h2>
         <p class="section__text section__text--change-margin-bottom"> The table below shows nutritional values per
           serving without the additional
           fillings.
@@ -84,20 +83,20 @@
         <table class="table">
           <tbody>
             <tr class="table__row">
-              <th class="table__cell table__cell--header">Calories</th>
+              <th scope="row" class="table__cell table__cell--header">Calories</th>
               <!-- <td class="table__cell table__cell--font-weight-color">277kcal</td> -->
               <td class="table__cell table__cell--normal">277kcal</td>
             </tr>
             <tr class="table__row">
-              <th class="table__cell table__cell--header">Carbs</th>
+              <th scope="row" class="table__cell table__cell--header">Carbs</th>
               <td class="table__cell table__cell--normal">0g</td>
             </tr>
             <tr class="table__row">
-              <th class="table__cell table__cell--header">Protein</th>
+              <th scope="row" class="table__cell table__cell--header">Protein</th>
               <td class="table__cell table__cell--normal">20g</td>
             </tr>
             <tr>
-              <th class="table__cell table__cell--header">Fat</th>
+              <th scope="row" class="table__cell table__cell--header">Fat</th>
               <td class="table__cell table__cell--normal">22g</td>
             </tr>
           </tbody>

@@ -2,18 +2,6 @@ body {
   background-color: hsl(30, 54%, 90%);
   display: flex;
   justify-content: center;
-  margin: 128px 48px;
-}
-
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  border: 0;
 }
 
 @media (max-width: 38rem) {
@@ -45,8 +33,8 @@ dd {
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role=list],
-ol[role=list] {
+ul,
+ol {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -109,7 +97,7 @@ td {
 }
 .container {
   max-width: 90rem;
-  margin: 124px 48px;
+  margin: 7.75rem 3rem;
 }
 
 @media (max-width: 38rem) {
@@ -120,7 +108,7 @@ td {
 .article {
   max-width: 46rem;
   padding: 2.5rem;
-  padding-bottom: 29px;
+  padding-bottom: 1.8125rem;
   background-color: hsl(0, 0%, 100%);
   border-radius: 1.5rem;
 }
@@ -148,7 +136,7 @@ td {
   margin: 2rem 0 1.9375rem;
 }
 .section--highlighted {
-  padding: 28px 28px 20px;
+  padding: 1.75rem 1.75rem 1.25rem;
   border-radius: 0.75rem;
   background-color: hsl(330, 100%, 98%);
   color: hsl(30, 10%, 34%);
@@ -183,13 +171,13 @@ td {
 .section__text {
   margin: 1.5rem 0;
   font-family: "Outfit", sans-serif;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
   color: hsl(30, 10%, 34%);
 }
 .section__text--change-margin-bottom {
-  margin-bottom: 12px;
+  margin-bottom: 0.75rem;
 }
 
 @media (max-width: 38rem) {
@@ -198,18 +186,18 @@ td {
     margin-right: 1.5rem;
   }
 }
-.list[role=list] {
+.list {
   list-style-type: disc;
-  margin-left: 25px;
+  margin-left: 1.5625rem;
   color: hsl(30, 10%, 34%);
 }
-.list--decimal[role=list] {
+.list--decimal {
   list-style-type: decimal;
 }
 .list__item {
-  margin-bottom: 8px;
-  padding-left: 15px;
-  font-size: 16px;
+  margin-bottom: 0.5rem;
+  padding-left: 0.9375rem;
+  font-size: 1rem;
   line-height: 1.5;
   font-weight: 400;
   font-family: "Outfit", sans-serif;
@@ -218,7 +206,7 @@ td {
 }
 .list__item::marker {
   color: hsl(14, 45%, 36%);
-  font: 700 16px "Outfit", sans-serif;
+  font: 700 1rem "Outfit", sans-serif;
 }
 
 .table {
@@ -233,18 +221,18 @@ td {
   font-family: "Outfit", sans-serif;
   line-height: 1.5;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 1rem;
   text-align: start;
   padding: 0.71875rem 0;
 }
 .table__cell--header {
   width: 50%;
-  padding-left: 32px;
+  padding-left: 2rem;
   color: hsl(30, 10%, 34%);
 }
 .table__cell--normal {
   width: 50%;
-  padding-left: 8px;
+  padding-left: 0.5rem;
   color: hsl(14, 45%, 36%);
   font-weight: 700;
 }

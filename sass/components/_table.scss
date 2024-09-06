@@ -14,18 +14,18 @@
   font-family: variable.$font-secondary;
   line-height: variable.$line-height-150;
   font-weight: variable.$font-regular;
-  font-size: variable.$font-size-sm;
+  font-size: function.pixel_to_rem(variable.$font-size-sm);
   text-align: start;
   padding: function.pixel_to_rem(11.5px) 0;
 
   &--header {
    width: 50%;
-   padding-left: 32px;
+   padding-left: function.pixel_to_rem(32px);
    color: map-get($map: variable.$article-palette, $key: stone-600);
   }
   &--normal {
    width: 50%;
-   padding-left: 8px;
+   padding-left: function.pixel_to_rem(8px);
    color: map-get($map: variable.$article-palette, $key: brown-800);
    font-weight: variable.$font-bold;
   }

@@ -2,7 +2,7 @@
 
 .container {
  max-width: function.pixel_to_rem(1440px);
- margin: 124px 48px;
+ margin: function.pixel_to_rem(124px) function.pixel_to_rem(48px);
 }
 
 @media (max-width: function.pixel_to_rem(608px)) {

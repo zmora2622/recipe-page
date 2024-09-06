@@ -5,19 +5,9 @@ body {
  background-color: map-get($map: variables.$article-palette, $key: stone-100);
  display: flex;
  justify-content: center;
- margin: 128px 48px;
+//  margin: function.pixel_to_rem(128px) function.pixel_to_rem(48px);
 }
 
-.sr-only {
- position: absolute;
- width: 1px;
- height: 1px;
- margin: -1px;
- padding: 0;
- overflow: hidden;
- clip: rect(0, 0, 0, 0);
- border: 0;
-}
 
 @media (max-width: function.pixel_to_rem(608px)) {
  body {
